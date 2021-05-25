@@ -10,8 +10,8 @@ import tqdm
 
 import models
 
-here = pathlib.Path(__file__).resolve().parent
-
+#here = pathlib.Path(__file__).resolve().parent
+here = pathlib.Path("/dfs/scratch1/ksaab/ncde_results")
 
 def _add_weight_regularisation(loss_fn, regularise_parameters, scaling=0.03):
     def new_loss_fn(pred_y, true_y):

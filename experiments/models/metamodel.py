@@ -6,6 +6,7 @@ here = pathlib.Path(__file__).resolve().parent
 sys.path.append(str(here / '..' / '..'))
 
 import controldiffeq
+import pdb
 
 
 class NeuralCDE(torch.nn.Module):
@@ -70,6 +71,7 @@ class NeuralCDE(torch.nn.Module):
         """
 
         # Extract the sizes of the batch dimensions from the coefficients
+        #pdb.set_trace()
         coeff, _, _, _ = coeffs
         batch_dims = coeff.shape[:-2]
         if not stream:
